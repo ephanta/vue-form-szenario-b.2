@@ -11,10 +11,24 @@
         <input v-model="input" placeholder="Input" />
         <p>Input ist: {{ input }}</p>
       </div>
-      <div class="textarea">
-        <label for="text">Textarea: </label>
-        <textarea v-model="text" placeholder="textarea"></textarea>
-        <p>Text ist: {{ text }}</p>
+      <div class="radio">
+        <input type="radio" id="one" value="One" v-model="picked" />
+        <label for="one">One</label>
+        <br />
+        <input type="radio" id="two" value="Two" v-model="picked" />
+        <label for="two">Two</label>
+        <br />
+        <span>Picked ist: {{ picked }}</span>
+      </div>
+      <div class="select">
+        <label for="sel">Selected ist: </label>
+        <select id="sel">
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>2</option>
+          <option>1</option>
+        </select>
       </div>
     </div>
   </div>
@@ -38,6 +52,7 @@ export default {
     return {
       checked: false,
       input: "",
+      picked: "",
       text: "",
     };
   },
