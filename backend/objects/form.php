@@ -20,13 +20,13 @@ class Form{
     public function prepareData($data){
         $this->gender = !isset($data['gender']) ? null : $data['gender'];
         $this->name = !isset($data['name']) ? null : $data['name'];
-        $this->bday = !isset($data['day']) ? null : $data['day'];
-        $this->bmonth = !isset($data['month']) ? null : $data['month'];
-        $this->byear = !isset($data['year']) ? null : $data['year'];
-        $this->color1 = !isset($data['color1']) ? false : true;
-        $this->color2 = !isset($data['color2']) ? false : true;
-        $this->color3 = !isset($data['color3']) ? false : true;
-        $this->color4 = !isset($data['color4']) ? false : true;
+        $this->bday = !isset($data['bday']) ? null : $data['bday'];
+        $this->bmonth = !isset($data['bmonth']) ? null : $data['bmonth'];
+        $this->byear = !isset($data['byear']) ? null : $data['byear'];
+        $this->color1 = !isset($data['color1']) ? false : $data['color1'];
+        $this->color2 = !isset($data['color2']) ? false : $data['color2'];
+        $this->color3 = !isset($data['color3']) ? false : $data['color3'];
+        $this->color4 = !isset($data['color4']) ? false : $data['color4'];
         $this->comment = !isset($data['comment']) ? null : $data['comment'];
     }
     public function create(){

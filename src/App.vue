@@ -191,7 +191,6 @@
 
 <script>
 import axios from 'axios';
-
 export default {
   name: "Home",
   data() {
@@ -217,16 +216,23 @@ export default {
         }
       },
       postData() {
-      //   this.allData.push( this.gender, this.name, 
-      //   this.bday, this.bmonth, this.byear, 
-      //   this.color1, this.color2, this.color3, this.color4, this.comment );
-       axios.get("http://www.jquery-form-b2.test/ajax/ajax.php")
-        .then(function(res) {
-          console.log(res);
-        }).catch(function(error){
-          console.log(error);
-        });
-      // axios.post("URL", dataParam)
+        const allData =  {
+            gender: this.gender,
+            name:  this.name,
+            bday: this.bday,
+            bmonth: this.bmonth,
+            byear: this.byear,
+            color1: this.color1,
+            color2: this.color2,
+            color3: this.color3,
+            color4: this.color4,
+            comment: this.comment,
+        }
+        axios.post("http://www.vue-form-b2.test/backend/ajax/ajax.php", allData).then(function(res) {
+            console.log(res);
+            }).catch(function(error){
+            console.log(error);
+            });
       }
     }
 }
