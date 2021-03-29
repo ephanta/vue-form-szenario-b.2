@@ -178,7 +178,6 @@
                     <input v-if="color4" type="checkbox" class="answer color4" name="color4" value="color4" checked />
                     <label v-if="color4" for="color4"> Farbe 4</label>
                 </div>
-                
             </div>
             <div class="comment">
                 <p class="label">Anmerkung:</p>
